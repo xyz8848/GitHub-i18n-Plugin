@@ -5,7 +5,7 @@
 // @namespace           https://greasyfork.org/zh-CN/scripts/448667-github-internationalization
 // @icon                data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAMAAABEpIrGAAAABGdBTUEAALGPC/xhBQAAAAFzUkdCAK7OHOkAAACEUExURUxpcRgWFhsYGBgWFhcWFh8WFhoYGBgWFiUlJRcVFRkWFhgVFRgWFhgVFRsWFhgWFigeHhkWFv////////////r6+h4eHv///xcVFfLx8SMhIUNCQpSTk/r6+jY0NCknJ97e3ru7u+fn51BOTsPCwqGgoISDg6empmpoaK2srNDQ0FhXV3eXcCcAAAAXdFJOUwCBIZXMGP70BuRH2Ze/LpIMUunHkpQR34sfygAAAVpJREFUOMt1U+magjAMDAVb5BDU3W25b9T1/d9vaYpQKDs/rF9nSNJkArDA9ezQZ8wPbc8FE6eAiQUsOO1o19JolFibKCdHGHC0IJezOMD5snx/yE+KOYYr42fPSufSZyazqDoseTPw4lGJNOu6LBXVUPBG3lqYAOv/5ZwnNUfUifzBt8gkgfgINmjxOpgqUA147QWNaocLniqq3QsSVbQHNp45N/BAwoYQz9oUJEiE4GMGfoBSMj5gjeWRIMMqleD/CAzUHFqTLyjOA5zjNnwa4UCEZ2YK3khEcBXHjVBtEFeIZ6+NxYbPqWp1DLKV42t6Ujn2ydyiPi9nX0TTNAkVVZ/gozsl6FbrktkwaVvL2TRK0C8Ca7Hck7f5OBT6FFbLATkL2ugV0tm0RLM9fedDvhWstl8Wp9AFDjFX7yOY/lJrv8AkYuz7fuP8dv9izCYH+x3/LBnj9fYPBTpJDNzX+7cAAAAASUVORK5CYII=
 // @supportURL          https://github.com/xyz8848/GitHub-i18n-Plugin/issues
-// @version             1.0.3
+// @version             1.0.4
 // @description         Translate GitHub
 // @description:zh      GitHub翻译插件
 // @description:zh-CN   GitHub翻译插件
@@ -216,7 +216,7 @@
   // translate "about"
   function translateDesc(el) {
     $(el).append("<br/>");
-    $(el).append("<a id='translate-me' href='#' style='color:rgb(27, 149, 224);font-size: small'>翻译</a>");
+    $(el).append("<span id='translate-me' style='font-size: small; display:inline-block; padding: 3px 5px; background-color: #F6F8FA; border-radius: 3px'><a href='#' style='color:rgb(27, 149, 224);font-size: small'>翻译</a></span>");
     $("#translate-me").click(function() {
       // get description text
       const desc = $(el)
@@ -259,9 +259,7 @@
           if (res.status === 200 && json?.header?.ret_code == "succ") {
             $("#translate-me").hide();
             const text = json.auto_translation.join(" ");
-            $(el).append("<span style='font-size: small; display:inline-block; padding: 3px 5px; background-color: #F6F8FA; border-radius: 3px'>Translations provided by <a target='_blank' style='color:rgb(27, 149, 224);' href='https://transmart.qq.com/'>Tencent TranSmart</a></span>");
-            $(el).append("<br/>");
-            $(el).append(text);
+            $(el).append("<span style='font-size: small; display:inline-block; padding: 3px 5px; background-color: #F6F8FA; border-radius: 3px'>" + text + "</span>");
           } else {
             alert("翻译失败");
           }
