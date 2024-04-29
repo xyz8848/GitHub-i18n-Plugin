@@ -42,8 +42,8 @@
     "dec": "12月",
     "december": "12月",
 
-    "hours ago": "小时前",
     "minutes ago": "分钟前",
+    "hours ago": "小时前",
 
     "sunday": "星期日",
     "monday": "星期一",
@@ -52,6 +52,8 @@
     "thursday": "星期四",
     "friday": "星期五",
     "saturday": "星期六",
+
+    "yesterday": "昨天",
 
     "__comments-2": "HomePage",
     "sign in": "登录",
@@ -295,7 +297,7 @@
     "see all starred topics": "查看全部收藏话题",
 
     "star": "收藏",
-    "unstar": "已加收藏",
+    "unstar": "已收藏",
     "wiki": "文档",
 
     "watch": "关注",
@@ -303,6 +305,10 @@
     "participating and @mentions": "参与和 @提及",
     "only receive notifications from this repository when participating or @mentioned.": "仅在参与或 @提及时接收来自此仓库的通知。",
     "all activity": "所有活动",
+    "all branches": "所有分支",
+    "all user": "所有用户",
+    "all time": "所有时间",
+    "share feedback about this page": "分享对此页面的反馈",
     "notified of all notifications on this repository.": "接收来自此仓库所有通知。",
     "ignore": "忽略",
     "never be notified.": "永不接收通知。",
@@ -317,6 +323,7 @@
     "new": "新建",
     "languages": "语言",
     "about": "关于",
+    "activity": "活动",
     "code": "代码",
     "dependencies": "依赖",
     "explore repositories": "探索仓库",
@@ -1548,6 +1555,7 @@
     ". we won’t ask for your password again for a few hours.": " 。我们将在未来几个小时内不再要求您输入密码。",
 
     "__comments-18": "deployments",
+    "deployments": "部署",
     "deployed to github-pages": "部署到 github-pages",
     "view deployment": "查看部署",
     "activity log": "活动记录",
